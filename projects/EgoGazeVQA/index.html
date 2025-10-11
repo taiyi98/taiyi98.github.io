@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EgoGazeVQA: Multi-Modal Conversational Balancer for Egocentric Video Understanding</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Prism.js for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">EgoGazeVQA</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#method">Method</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#dataset">Dataset</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#citation">Citation</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="gradient-text">EgoGazeVQA</span>
+            </h1>
+            <h2 class="hero-subtitle">
+                Multi-Modal Conversational Balancer for Egocentric Video Understanding
+            </h2>
+            
+            <div class="authors">
+                <a href="https://taiyi98.github.io" target="_blank">Taiyi Pan<sup>1</sup></a>,
+                <a href="#">Author 2<sup>2</sup></a>,
+                <a href="#">Author 3<sup>1</sup></a>,
+                <a href="#">Author 4<sup>3</sup></a>
+            </div>
+            
+            <div class="affiliations">
+                <sup>1</sup>University Name 1 &nbsp;&nbsp;
+                <sup>2</sup>University Name 2 &nbsp;&nbsp;
+                <sup>3</sup>Institution Name 3
+            </div>
+            
+            <div class="conference">
+                <span class="conference-badge">NeurIPS 2025</span>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> Paper
+                </a>
+                <a href="https://github.com/yourusername/EgoGazeVQA" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <i class="fas fa-database"></i> Dataset
+                </a>
+                <a href="#demo" class="btn btn-secondary">
+                    <i class="fas fa-play"></i> Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract-content">
+                <p>
+                    Understanding egocentric videos poses unique challenges due to the first-person perspective and dynamic nature of human activities. 
+                    We present <strong>EgoGazeVQA</strong>, a novel multi-modal framework that leverages gaze information as an additional modality to enhance 
+                    video question answering in egocentric scenarios. Our approach introduces a conversational balancer mechanism that effectively 
+                    integrates visual, textual, and gaze signals to provide more accurate and contextually relevant answers.
+                </p>
+                <p>
+                    Through extensive experiments on multiple egocentric video datasets, we demonstrate that incorporating gaze patterns significantly 
+                    improves the model's understanding of user intentions and scene dynamics. Our method achieves state-of-the-art performance on 
+                    EgoExo4D and EGTEA benchmarks, showing improvements of X% and Y% respectively over previous baselines.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Method</h2>
+            
+            <div class="method-overview">
+                <img src="assets/images/architecture.png" alt="Model Architecture" class="method-image">
+                <p class="image-caption">
+                    Figure 1: Overview of the EgoGazeVQA architecture. Our model consists of three main components: 
+                    (a) Visual Encoder, (b) Gaze Attention Module, and (c) Conversational Balancer.
+                </p>
+            </div>
+            
+            <div class="method-details">
+                <h3>Key Contributions</h3>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Gaze-Aware Attention:</strong> Novel attention mechanism that uses gaze patterns to guide visual feature extraction
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Multi-Modal Fusion:</strong> Effective integration of visual, textual, and gaze modalities through learnable balancing
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Temporal Reasoning:</strong> Enhanced temporal understanding through gaze trajectory analysis
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Large-Scale Dataset:</strong> Introduction of EgoGazeVQA dataset with 50K+ annotated QA pairs
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <h2 class="section-title">Experimental Results</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Quantitative Results</h3>
+                    <div class="table-responsive">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>EgoExo4D</th>
+                                    <th>EGTEA</th>
+                                    <th>Epic-Kitchens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Baseline</td>
+                                    <td>45.2</td>
+                                    <td>38.7</td>
+                                    <td>41.3</td>
+                                </tr>
+                                <tr>
+                                    <td>Method A</td>
+                                    <td>48.5</td>
+                                    <td>42.1</td>
+                                    <td>44.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Method B</td>
+                                    <td>51.3</td>
+                                    <td>44.8</td>
+                                    <td>47.2</td>
+                                </tr>
+                                <tr class="highlight">
+                                    <td><strong>EgoGazeVQA (Ours)</strong></td>
+                                    <td><strong>58.7</strong></td>
+                                    <td><strong>52.3</strong></td>
+                                    <td><strong>54.1</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Ablation Study</h3>
+                    <canvas id="ablationChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="visualization-section">
+                <h3>Qualitative Results</h3>
+                <div class="vis-grid">
+                    <div class="vis-item">
+                        <img src="assets/images/result1.jpg" alt="Result 1">
+                        <p>Scene understanding with gaze guidance</p>
+                    </div>
+                    <div class="vis-item">
+                        <img src="assets/images/result2.jpg" alt="Result 2">
+                        <p>Temporal reasoning visualization</p>
+                    </div>
+                    <div class="vis-item">
+                        <img src="assets/images/result3.jpg" alt="Result 3">
+                        <p>Multi-modal attention maps</p>
+                    </div>
+                    <div class="vis-item">
+                        <img src="assets/images/result4.jpg" alt="Result 4">
+                        <p>Comparison with baselines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dataset Section -->
+    <section id="dataset" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">EgoGazeVQA Dataset</h2>
+            
+            <div class="dataset-stats">
+                <div class="stat-card">
+                    <i class="fas fa-video"></i>
+                    <h3>10K+</h3>
+                    <p>Videos</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>50K+</h3>
+                    <p>QA Pairs</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>100K+</h3>
+                    <p>Gaze Points</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>500+</h3>
+                    <p>Hours</p>
+                </div>
+            </div>
+            
+            <div class="dataset-description">
+                <h3>Dataset Features</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> High-quality egocentric videos with synchronized gaze tracking</li>
+                    <li><i class="fas fa-check"></i> Diverse scenarios including cooking, assembly, and navigation</li>
+                    <li><i class="fas fa-check"></i> Multi-level question types: spatial, temporal, and causal reasoning</li>
+                    <li><i class="fas fa-check"></i> Professional annotations with quality control</li>
+                </ul>
+                
+                <div class="download-section">
+                    <h3>Download</h3>
+                    <p>The dataset will be publicly available upon paper acceptance.</p>
+                    <a href="#" class="btn btn-primary disabled">
+                        <i class="fas fa-download"></i> Coming Soon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="section">
+        <div class="container">
+            <h2 class="section-title">Interactive Demo</h2>
+            
+            <div class="demo-container">
+                <div class="demo-player">
+                    <video id="demo-video" controls>
+                        <source src="assets/videos/demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="demo-controls">
+                    <h3>Try it yourself</h3>
+                    <div class="input-group">
+                        <label>Select a video:</label>
+                        <select id="video-select">
+                            <option>Cooking breakfast</option>
+                            <option>Assembling furniture</option>
+                            <option>Navigation task</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Ask a question:</label>
+                        <input type="text" id="question-input" placeholder="What is the person doing?">
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="runDemo()">
+                        <i class="fas fa-play"></i> Run Inference
+                    </button>
+                    
+                    <div class="demo-output">
+                        <h4>Model Output:</h4>
+                        <p id="demo-result">Results will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section id="citation" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Citation</h2>
+            
+            <div class="citation-box">
+                <pre><code class="language-bibtex">@inproceedings{pan2025egogaze,
+    title={EgoGazeVQA: Multi-Modal Conversational Balancer for Egocentric Video Understanding},
+    author={Pan, Taiyi and Author2 and Author3 and Author4},
+    booktitle={Advances in Neural Information Processing Systems},
+    year={2025}
+}</code></pre>
+                <button class="copy-btn" onclick="copyToClipboard()">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 EgoGazeVQA Project. All rights reserved.</p>
+                <p>
+                    <a href="https://github.com/taiyi98/EgoGazeVQA" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/yourhandle" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
