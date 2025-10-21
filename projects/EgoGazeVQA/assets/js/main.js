@@ -78,35 +78,41 @@ if (ctx) {
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Full Model', 'w/o Gaze', 'w/o Temporal', 'w/o Balance', 'Baseline'],
+            labels: ['Qwen2.5-VL-72B\n+ Salience Map', 'Qwen2.5-VL-72B\n+ Textual', 'Qwen2.5-VL-72B\n+ Visual', 'Qwen2.5-VL-72B\nBaseline', 'InternVL2.5-8B'],
             datasets: [{
                 label: 'Accuracy (%)',
-                data: [58.7, 52.1, 49.8, 51.3, 45.2],
+                data: [66.3, 65.0, 63.9, 60.5, 60.6],
                 backgroundColor: [
                     'rgba(37, 99, 235, 0.8)',
-                    'rgba(239, 68, 68, 0.8)',
-                    'rgba(245, 158, 11, 0.8)',
                     'rgba(16, 185, 129, 0.8)',
-                    'rgba(107, 114, 128, 0.8)'
+                    'rgba(245, 158, 11, 0.8)',
+                    'rgba(107, 114, 128, 0.8)',
+                    'rgba(139, 92, 246, 0.8)'
                 ],
                 borderColor: [
                     'rgba(37, 99, 235, 1)',
-                    'rgba(239, 68, 68, 1)',
-                    'rgba(245, 158, 11, 1)',
                     'rgba(16, 185, 129, 1)',
-                    'rgba(107, 114, 128, 1)'
+                    'rgba(245, 158, 11, 1)',
+                    'rgba(107, 114, 128, 1)',
+                    'rgba(139, 92, 246, 1)'
                 ],
                 borderWidth: 2
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: true,
             plugins: {
                 legend: {
                     display: false
                 },
                 title: {
-                    display: false
+                    display: true,
+                    text: 'Performance Comparison of Different Models and Strategies',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    }
                 }
             },
             scales: {
